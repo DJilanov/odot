@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
+gem 'simple_form'
 gem 'sqlite3', :group => [:development, :test]
 group :production do
   gem 'thin'
