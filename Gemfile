@@ -9,11 +9,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'simple_form'
-gem 'sqlite3', :group => [:development, :test]
-group :production do
-  gem 'thin'
-  gem 'pg'
-end
+gem 'pg'
+gem 'sqlite3', :group => [:development]
+
 # set it only to test level
 
 group :doc do
