@@ -1,0 +1,11 @@
+<h1>Welcome to the TODO lists app</h1>
+
+<p> This is the easy usable Ruby web app where you can just type what you have to do today and plan your TODO lists </p>
+
+<% if user_signed_in? %>
+    <%= link_to 'Todo list', todo_lists_path %>
+<% else %>
+    <%= link_to 'Login', user_session_path %>
+    <%= link_to 'Register', new_user_registration_path %>
+<% end %>
+
