@@ -1,5 +1,12 @@
 == README
 BETA VERSION OF MY TODO LIST 
+
+http://djtodo.herokuapp.com/
+
+HERE YOU CAN CHECK HOW IT WORKS
+
+README SOON WILL BE FILLED
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
