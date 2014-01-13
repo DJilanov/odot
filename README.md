@@ -19,6 +19,8 @@ The main reason I created that app was because I was actually unable to find goo
 * Easy understandable
 * Will be improved to be better for you when you give me some feedback
 
+## How to use
+
 ## Requirements ( if you want to fork and help me with the improvements )
 
 
