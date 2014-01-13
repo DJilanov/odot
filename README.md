@@ -4,8 +4,8 @@ The easy usable todo app that can be used to track what you have to do while you
 
 ##Where to find
 
-You can check it how it works in
-[a link](http://djtodo.herokuapp.com/)
+
+[You can check it how it works in](http://djtodo.herokuapp.com/)
 
 ##When to use
 
