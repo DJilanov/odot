@@ -1,13 +1,11 @@
-== README
-BETA VERSION OF MY TODO LIST APP 
-
-http://djtodo.herokuapp.com/
-
-HERE YOU CAN CHECK HOW IT WORKS
-
 #Description
 
 The easy usable todo app that can be used to track what you have to do while your account and list is protected by encription.
+
+##Where to find
+
+You can check it how it works in
+[a link](http://djtodo.herokuapp.com/)
 
 ##When to use
 
