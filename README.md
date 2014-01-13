@@ -21,7 +21,7 @@ The main reason I created that app was because I was actually unable to find goo
 
 ## How to use
 
-## Requirements ( if you want to fork and help me with the improvements )
+### Requirements ( if you want to fork and help me with the improvements )
 
 
 * Ruby version - 1.9.3
