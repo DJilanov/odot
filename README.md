@@ -5,11 +5,9 @@ The easy usable todo app that can be used to track what you have to do while you
 ##Where to find
 
 
-[You can check it how it works in](http://djtodo.herokuapp.com/)
+[You can check it how it works here](http://djtodo.herokuapp.com/)
 
 ##Why to use
-
-[![1](Screenshots/1.png)](Screenshots/1.png)
 
 The main reason I created that app was because I was actually unable to find good free app where i can make my TODO lists whitout the risk of someone else to see them whitout paying to anyone even one cent. The limit is realy high (unreachable if you are not a bot ) and you can use it as much as you want whitout any problems.
 
