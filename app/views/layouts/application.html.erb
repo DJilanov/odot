@@ -10,16 +10,25 @@
   <!-- nav -->
   <div class="container head-container">
     <div class="nav">
-      <div class="navbar-header"><span><%= link_to "Odot", root_path %> </span>the easy todo list app.</div>
-      <ul class="nav nav-pills">
+      <div class="navbar-header">
+        <span>
+          <%= link_to "Odot", root_path %> 
+        </span>the easy todo list app
         <% if user_signed_in? %>
-          <li class="username">Signed in as... <%= current_user.email %></li>
-          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-        <% else %>
-          <li><%= link_to 'Login', user_session_path %></li>
-          <li><%= link_to 'Register', new_user_registration_path %></li>
+          <ul class="nav nav-pills" style="margin-right:-50px;">
+            <li><%= link_to 'Todo lists', todo_lists_path %></li>
+          </ul>
         <% end %>
-      </ul>
+      </div>
+        <ul class="nav nav-pills">
+          <% if user_signed_in? %>
+            <li class="username">Signed in as... <%= current_user.email %></li>
+            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+            <li><%= link_to 'Login', user_session_path %></li>
+            <li><%= link_to 'Register', new_user_registration_path %></li>
+          <% end %>
+        </ul>
       <br class="clear" />
     </div>
   </div>

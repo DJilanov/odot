@@ -1,19 +1,32 @@
-<h1>Todo Lists</h1>
+<div class="container head-container">
+    <div class="nav "  style="border-style:none;">
+      <div class="navbar-header text-center" style="width:100%;">
+        <span>
+          <%= link_to 'Todo lists', todo_lists_path %>
+        </span>
+      </div>
+    </div>
 
   <% @todo_lists.each do |todo_list| %>
-    <div id="<%= dom_id(todo_list) %>">
-      <h2><%= todo_list.title %></h2>
-      <p><%= todo_list.description %></p>
+  <div class="element" id="<%= dom_id(todo_list) %>">
+    <div class="nav">
+      <div class="navbar-header">
+        <span>
+          <%= todo_list.title %>
+        </span>
+      </div>
       <ul>
-        <li><%= link_to "List Items", todo_list_todo_items_path(todo_list) %></li>
-        <li><%= link_to 'Show', todo_list %></li>
-        <li><%= link_to 'Edit', edit_todo_list_path(todo_list) %></li>
-        <li><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          <li><a class="description">Description</a></li>
+          <li><%= link_to "List Items", todo_list_todo_items_path(todo_list) %></li>
+          <li><%= link_to 'Show', todo_list %></li>
+          <li><%= link_to 'Edit', edit_todo_list_path(todo_list) %></li>
+          <li><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></li>
       </ul>
-      <br class="clear" />
     </div>
+    <p class="hide">
+      <%= todo_list.description %>
+    </p>
+  </div>
   <% end %>
 
-<br>
-
-<%= link_to 'New Todo list', new_todo_list_path %>
+<span><%= link_to 'New Todo list', new_todo_list_path , :class => 'btn btn-default'%></span>

@@ -13,3 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+$( document ).ready(function() {
+    $(".description").click(function(e) {
+    	if($(this).closest(".element").children('p').hasClass("hide"))
+    	{
+    		$(this).closest(".element").children('p').removeClass("hide");
+    	}
+		else
+		{
+			$(this).closest(".element").children('p').addClass("hide");
+		}
+	});
+});

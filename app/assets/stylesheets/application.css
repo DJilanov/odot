@@ -100,3 +100,19 @@ div.nav ul li a:hover {
 .source a:hover{
   background:rgb(188, 232, 241);
 }
+
+.changepass{
+  margin-top: 50px;
+}
+
+.changepass div{
+  margin-top: 1%;
+}
+
+.signup div{
+  margin-bottom: 1%;
+}
+
+span a:hover{
+  background:#FFFFFF; 
+}

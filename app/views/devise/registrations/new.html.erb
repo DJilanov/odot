@@ -1,18 +1,49 @@
-<h2>Sign up</h2>
+<div class="container text-center signup">
+	<h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	  <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+	  <div>
+	  	<label class="col-xs-6" >
+	  		<span style="float:right">
+	  			<%= f.label :email %>
+	  		</span>
+	  	</label>
+	  	<div class="col-xs-6">
+	  		<span style="float:left">
+	  			<%= f.email_field :email, :autofocus => true , :style => 'width:200px;' %>
+	  		</span>
+	  	</div>
+	  </div>
+	  <div>
+	  	<label class="col-xs-6" >
+	  		<span style="float:right">
+	  			<%= f.label :password %>
+	  		</span>
+	  	</label>
+	  	<div class="col-xs-6">
+	  		<span style="float:left">
+	  			<%= f.password_field :password , :style => 'width:200px;'%>
+	  		</span>
+	  	</div>
+	  </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+	  <div>
+	  	<label class="col-xs-6" >
+	  		<span style="float:right">
+	  			<%= f.label :password_confirmation %>
+	  		</span>
+	  	</label>
+	  	<div class="col-xs-6">
+	  		<span style="float:left">
+	  			<%= f.password_field :password_confirmation , :style => 'width:200px;'%>
+	  		</span>
+	  	</div>
+	  </div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+	  <div style="display:inline;"><%= f.submit "Sign up" , :class => 'btn btn-success'%></div>
+	<% end %>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+</div>
