@@ -29,23 +29,36 @@ div.nav {
   padding: 10px 0 0 5px;
 }
 
-div.nav h1 {
+div.nav .navbar-header {
   float: left;
   margin: 0 1em 0 0;
+  width:50%;
+  font-size: 30px;
+}
+
+div.nav .navbar-header span{
+  font-size: 40px;
+  margin-right: 1%;
 }
 
 div.nav a { text-decoration: none !important; }
 
 div.nav ul {
-  float: left;
+  float: right;
   list-style: none;
   clear: right;
-  margin: 0 0 0 1em;
+  margin: 0 1em 0 0;
   padding: 0;
+  margin-right: 50px;
 }
 
 div.nav ul li {
   float: left;
+  line-height: 40px;
+}
+
+.username{
+  margin-top: 20px;
 }
 
 div.nav ul li a {
@@ -59,4 +72,31 @@ div.nav ul li a {
 div.nav ul li a:hover {
   background: #aaa;
   color: #eee;
+}
+
+.alert-dismissable .close {
+  right:0px !important;
+}
+
+.head-container{
+  width:100% !important;
+}
+
+.nav-pills li{
+  font-size: 15px;
+}
+
+.source {
+  float:right;
+  font-size: 20px;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:rgb(217, 237, 247);
+}
+
+.source a:hover{
+  background:rgb(188, 232, 241);
 }
