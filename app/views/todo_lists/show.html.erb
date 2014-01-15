@@ -1,6 +1,6 @@
 <div class="element">
 	<div class="nav">
-	  <div class="navbar-header">
+	  <div class="navbar-header" style="overflow:hidden">
 	    <span>
 	      <%= @todo_list.title %>
 	    </span>
@@ -10,12 +10,12 @@
 	      <% if @todo_list.has_incomplete_items? %>
 	      	<li><a class="incomplete">Incompleate items</a></li>
 	      <% else %>
-	      	<li><a style="disabled">Incompleate items</a></li>
+	      	<li><a style="color:#C0C0C0">Incompleate items</a></li>
 	      <% end %>
 	      <% if @todo_list.has_completed_items? %>
 	      	<li><a class="completed">Completed items</a></li>
 	      <% else %>
-	      	<li><a style="disabled">Completed items</a></li>
+	      	<li><a style="color:#C0C0C0">Completed items</a></li>
 	      <% end %>
 	  </ul>
 	</div>
@@ -23,7 +23,7 @@
       <%= @todo_list.description %>
     </p>
     <p style="overflow:auto">
-      	<ul class="hide incomplete_items big">
+      	<ul class="hide incomplete_items big" style="overflow:auto">
 			<% @todo_list.todo_items.incomplete.each do |todo_item| %>
 				<li> 
 					<%= todo_item.content %>
@@ -32,7 +32,7 @@
 		</ul>
     </p>
     <p style="overflow:auto">
-    	<ul class="hide completed_items big">
+    	<ul class="hide completed_items big" style="overflow:auto">
     		<% if @todo_list.has_completed_items? %>
 				<% @todo_list.todo_items.complete.each do |todo_item| %>
 				<li> 
@@ -45,5 +45,5 @@
 
 </div>
 
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>
+<button type="button" class="btn btn-default"><span><%= link_to 'Edit', edit_todo_list_path(@todo_list) %></span></button>
+<button type="button" class="btn btn-default"><span><%= link_to 'Back', todo_lists_path %></span></button>

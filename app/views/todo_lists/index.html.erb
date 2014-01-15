@@ -10,7 +10,7 @@
   <% @todo_lists.each do |todo_list| %>
   <div class="element" id="<%= dom_id(todo_list) %>">
     <div class="nav">
-      <div class="navbar-header">
+      <div class="navbar-header" style="overflow:hidden">
         <span>
           <%= todo_list.title %>
         </span>
