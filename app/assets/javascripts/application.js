@@ -15,13 +15,39 @@
 //= require bootstrap
 $( document ).ready(function() {
     $(".description").click(function(e) {
-    	if($(this).closest(".element").children('p').hasClass("hide"))
+    	if($(this).closest(".element").children('.description_items').hasClass("hide"))
     	{
-    		$(this).closest(".element").children('p').removeClass("hide");
+    		$(this).closest(".element").children('.description_items').removeClass("hide");
+    		$(this).closest(".element").children('.incomplete_items').addClass("hide");
+    		$(this).closest(".element").children('.completed_items').addClass("hide");
     	}
 		else
 		{
-			$(this).closest(".element").children('p').addClass("hide");
+			$(this).closest(".element").children('.description_items').addClass("hide");
+		}
+	});
+	$(".incomplete").click(function(e) {
+    	if($(this).closest(".element").children('.incomplete_items').hasClass("hide"))
+    	{
+    		$(this).closest(".element").children('.incomplete_items').removeClass("hide");
+    		$(this).closest(".element").children('.description_items').addClass("hide");
+    		$(this).closest(".element").children('.completed_items').addClass("hide");
+    	}
+		else
+		{
+			$(this).closest(".element").children('.incomplete_items').addClass("hide");
+		}
+	});
+	$(".completed").click(function(e) {
+    	if($(this).closest(".element").children('.completed_items').hasClass("hide"))
+    	{
+    		$(this).closest(".element").children('.completed_items').removeClass("hide");
+    		$(this).closest(".element").children('.incomplete_items').addClass("hide");
+    		$(this).closest(".element").children('.description_items').addClass("hide");
+    	}
+		else
+		{
+			$(this).closest(".element").children('.completed_items').addClass("hide");
 		}
 	});
 });

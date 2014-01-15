@@ -1,25 +1,43 @@
-<%= form_for(@todo_list) do |f| %>
-  <% if @todo_list.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@todo_list.errors.count, "error") %> prohibited this todo_list from being saved:</h2>
+<div class="container text-center">
+  <%= form_for(@todo_list) do |f| %>
+    <% if @todo_list.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@todo_list.errors.count, "error") %> prohibited this todo_list from being saved:</h2>
 
-      <ul>
-      <% @todo_list.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @todo_list.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field" style="margin-bottom:20px;">
+      <label class="col-xs-2" >
+        <span style="float:right">
+          <%= f.label :title %><br>
+        </span>
+      </label>
+      <div class="col-xs-10">
+        <span class="col-xs-12" style="float:left">
+          <%= f.text_field :title , :style => 'width:100%;'%>
+        </span>
+      </div>
+    </div>
+    <br/>
+    <div class="field" style="margin-top:20px;">
+      <label class="col-xs-2" >
+        <span style="float:right">
+           <%= f.label :description %><br>
+        </span>
+      </label>
+      <div class="col-xs-10">
+        <span class="col-xs-12" style="float:left">
+          <%= f.text_area :description , :style => 'width:100%;height:300px;'%>
+        </span>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Update Todo List' , :class => '  btn btn-default' , :style => 'margin-top:20px;'%>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

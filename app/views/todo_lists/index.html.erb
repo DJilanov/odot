@@ -17,13 +17,13 @@
       </div>
       <ul>
           <li><a class="description">Description</a></li>
-          <li><%= link_to "List Items", todo_list_todo_items_path(todo_list) %></li>
+          <li><%= link_to "Edit Items", todo_list_todo_items_path(todo_list) %></li>
           <li><%= link_to 'Show', todo_list %></li>
-          <li><%= link_to 'Edit', edit_todo_list_path(todo_list) %></li>
+          <li><%= link_to 'Edit List', edit_todo_list_path(todo_list) %></li>
           <li><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></li>
       </ul>
     </div>
-    <p class="hide">
+    <p class="hide description_items big" style="overflow:auto">
       <%= todo_list.description %>
     </p>
   </div>

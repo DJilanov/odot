@@ -12,6 +12,10 @@
  *= require_tree 
  *= require bootstrap
  */
+.big {
+  font-size: 20px;
+}
+
 div.alert {
   border: 2px solid #aaa;
   padding: 10px;
@@ -116,3 +120,4 @@ div.nav ul li a:hover {
 span a:hover{
   background:#FFFFFF; 
 }
+

@@ -1,26 +1,49 @@
-<h1><%= @todo_list.title %></h1>
+<div class="element">
+	<div class="nav">
+	  <div class="navbar-header">
+	    <span>
+	      <%= @todo_list.title %>
+	    </span>
+	  </div>
+	  <ul>
+	      <li><a class="description">Description</a></li>
+	      <% if @todo_list.has_incomplete_items? %>
+	      	<li><a class="incomplete">Incompleate items</a></li>
+	      <% else %>
+	      	<li><a style="disabled">Incompleate items</a></li>
+	      <% end %>
+	      <% if @todo_list.has_completed_items? %>
+	      	<li><a class="completed">Completed items</a></li>
+	      <% else %>
+	      	<li><a style="disabled">Completed items</a></li>
+	      <% end %>
+	  </ul>
+	</div>
+	<p class="hide description_items big" style="overflow:auto">
+      <%= @todo_list.description %>
+    </p>
+    <p style="overflow:auto">
+      	<ul class="hide incomplete_items big">
+			<% @todo_list.todo_items.incomplete.each do |todo_item| %>
+				<li> 
+					<%= todo_item.content %>
+				</li>
+			<% end %>
+		</ul>
+    </p>
+    <p style="overflow:auto">
+    	<ul class="hide completed_items big">
+    		<% if @todo_list.has_completed_items? %>
+				<% @todo_list.todo_items.complete.each do |todo_item| %>
+				<li> 
+					<%= todo_item.content %>
+				</li>
+				<% end %>
+			<% end %>
+    	</ul>
+    </p>
 
-<h2><%= @todo_list.description %></h2>
+</div>
 
-<% if @todo_list.has_incomplete_items? %>
-	<h3> Incomplete Items </h3>
-	<ul>
-		<% @todo_list.todo_items.incomplete.each do |todo_item| %>
-		<li> 
-			<%= todo_item.content %>
-		</li>
-		<% end %>
-	</ul>
-<% end %>
-<% if @todo_list.has_completed_items? %>
-	<h3> Complete Items </h3>
-	<ul>
-		<% @todo_list.todo_items.complete.each do |todo_item| %>
-		<li> 
-			<%= todo_item.content %>
-		</li>
-		<% end %>
-	</ul>
-<% end %>
 <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
 <%= link_to 'Back', todo_lists_path %>
