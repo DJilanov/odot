@@ -22,7 +22,7 @@
       </div>
         <ul class="nav nav-pills">
           <% if user_signed_in? %>
-            <li class="username">Signed in as... <%= current_user.email %></li>
+            <li ><%= link_to current_user.email, edit_user_registration_path %></li>
             <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
           <% else %>
             <li><%= link_to 'Login', user_session_path %></li>
